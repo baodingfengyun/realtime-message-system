@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Socket Test</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript" src="socket.io.js"></script>
+<script type="text/javascript" src="msg-socketio.js"></script>
+<script type="text/javascript">
+	extPushSocketIoClient.prototype = {
+		onMessage : function(data) {
+			var ta = document.getElementById('responseText');
+			if (ta.value == "") {
+				ta.value =data.topic+'::::'+data.msg;
+			} else {
+				ta.value = ta.value + '\n' + data.topic+'::::'+data.msg;
+			}
+		}
+	}
+	var connect = new extPushSocketIoConnect();
+	connect.init(new extPushSocketIoClient());
+
+	function subme() {
+		connect
+				.sendCmd("msg_demo", "sub",
+						"4254d79233ea68b36ef92fcfc08b2aa9");
+	}
+</script>
+
+</head>
+<body>
+    <form onsubmit="return false;">
+        <input type="text" name="message" value="Hello, World!" /><input
+            type="button" value="Send Web Socket Data"
+            onclick="send(this.form.message.value)" />
+        <h3>Output</h3>
+        <textarea id="responseText" style="width: 500px; height: 300px;"></textarea>
+        
+        <input  type="button" name="test" value="sub" onclick="subme();">
+    </form>
+</body>
+</html>
