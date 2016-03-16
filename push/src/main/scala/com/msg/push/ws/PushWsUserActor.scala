@@ -6,17 +6,17 @@ import org.java_websocket.WebSocket
 import scala.collection.JavaConversions._
 import akka.actor.ActorRef
 import org.java_websocket.handshake.ClientHandshake
-import com.msg.base.actor.TerminalSubBaseActor
-import com.msg.base.model.Msg
+import com.msg.push.actor.SubBaseActor
+import com.msg.common.model.Msg
 import java.util.ArrayList
 import com.msg.push.util.Constants
-import com.msg.base.model.RegAddrEntity
+import com.msg.common.model.RegAddrEntity
 
 case class Open(ws: WebSocket, hs: ClientHandshake)
 case class Close(ws: WebSocket, code: Int, reason: String, external: Boolean)
 case class Error(ws: WebSocket, ex: Exception)
 
-class PushWsUserActor(ws: WebSocket) extends TerminalSubBaseActor with ActorLogging {
+class PushWsUserActor(ws: WebSocket) extends SubBaseActor with ActorLogging {
 
     def remoteAddress: String = RegAddrEntity.getRandomAddress
 

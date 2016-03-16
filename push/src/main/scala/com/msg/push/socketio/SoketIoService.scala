@@ -4,10 +4,10 @@ import com.corundumstudio.socketio.SocketIOClient
 import akka.actor.ActorSystem
 import akka.actor.Props
 import akka.actor.ActorRef
-import com.msg.base.model.TermUnSubAll
-import com.msg.base.model.Stop
-import com.msg.base.model.Sub
-import com.msg.base.model.UnSub
+import com.msg.common.model.TermUnSubAll
+import com.msg.common.model.Stop
+import com.msg.common.model.Sub
+import com.msg.common.model.UnSub
 
 class SoketIoService(context: ActorSystem) extends SoketIo {
     private var reactors = Map[Int, ActorRef]()

@@ -3,24 +3,24 @@ package com.msg.push.socket
 import akka.actor.Actor
 import akka.io.Tcp
 import akka.util.ByteString
-import com.msg.base.actor.TerminalSubBaseActor
+import com.msg.push.actor.SubBaseActor
 import akka.actor.ActorLogging
-import com.msg.base.model.Msg
+import com.msg.common.model.Msg
 import java.util.ArrayList
 import akka.actor.ActorRef
 import akka.io.Tcp._
-import com.msg.base.model.Sub
-import com.msg.base.model.UnSub
-import com.msg.base.model.Stop
-import com.msg.base.util.CommonUtil
-import com.msg.base.model.TermUnSubAll
-import com.msg.base.model.History
-import com.msg.base.model.ListMsg
-import com.msg.base.model.RegAddrEntity
+import com.msg.common.model.Sub
+import com.msg.common.model.UnSub
+import com.msg.common.model.Stop
+import com.msg.common.util.CommonUtil
+import com.msg.common.model.TermUnSubAll
+import com.msg.common.model.History
+import com.msg.common.model.ListMsg
+import com.msg.common.model.RegAddrEntity
 import scala.collection.JavaConversions._
 import com.msg.push.util.Constants
 
-class ListeningHander extends TerminalSubBaseActor with ActorLogging {
+class ListeningHander extends SubBaseActor with ActorLogging {
     private var reactors = Map[String, ActorRef]()
 
     final def forResource(descriptor: String, reactor: Option[ActorRef]) {

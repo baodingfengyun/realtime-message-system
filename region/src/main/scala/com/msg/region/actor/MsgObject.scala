@@ -1,8 +1,8 @@
 package com.msg.region.actor
 
-import com.msg.base.model.MData
-import com.msg.base.model.ReplySubNum
-import com.msg.base.model.VisitMsg
+import com.msg.common.model.MData
+import com.msg.common.model.ReplySubNum
+import com.msg.common.model.VisitMsg
 import akka.cluster.sharding.ShardRegion
 import com.msg.region.Configuration
 

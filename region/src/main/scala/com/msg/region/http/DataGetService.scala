@@ -11,15 +11,15 @@ import HttpMethods._
 import MediaTypes._
 import akka.util.Timeout
 import akka.cluster.sharding.ClusterSharding
-import com.msg.base.model.VisitMsg
-import com.msg.base.model.History
-import com.msg.base.util.FstUtil
-import com.msg.base.util.JsonUtil
+import com.msg.common.model.VisitMsg
+import com.msg.common.model.History
+import com.msg.common.util.FstUtil
+import com.msg.common.util.JsonUtil
 import spray.httpx.encoding.Gzip
-import com.msg.base.model.TopicEntity
+import com.msg.common.model.TopicEntity
 import com.msg.region.util.Constants
 import java.nio.charset.Charset
-import com.msg.base.model.Msg
+import com.msg.common.model.Msg
 
 case class RetrievalTimeout()
 

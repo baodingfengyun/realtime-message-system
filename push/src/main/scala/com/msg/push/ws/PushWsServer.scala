@@ -11,10 +11,10 @@ import akka.actor.Props
 import akka.actor.ActorSystem
 import java.text.SimpleDateFormat
 import java.util.Date
-import com.msg.base.model.Sub
-import com.msg.base.model.UnSub
-import com.msg.base.model.TermUnSubAll
-import com.msg.base.model.Stop
+import com.msg.common.model.Sub
+import com.msg.common.model.UnSub
+import com.msg.common.model.TermUnSubAll
+import com.msg.common.model.Stop
 import akka.actor.PoisonPill
 
 class PushWsServer(wsUri: String, port: Int, context: ActorSystem) extends WebSocketServer(new InetSocketAddress(port)) {

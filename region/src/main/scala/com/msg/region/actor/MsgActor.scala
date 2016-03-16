@@ -8,7 +8,7 @@ import scala.concurrent.duration._
 import akka.persistence.SnapshotOffer
 import akka.persistence.SnapshotMetadata
 import akka.persistence.RecoveryCompleted
-import com.msg.base.util.FstUtil
+import com.msg.common.util.FstUtil
 import akka.persistence.SnapshotSelectionCriteria
 import com.msg.region.util.Constants
 import java.util.Date
@@ -17,7 +17,7 @@ import akka.persistence.Persistence
 import akka.actor.Terminated
 import akka.actor.ActorRef
 import akka.actor.ActorSystem
-import com.msg.base.model._
+import com.msg.common.model._
 import java.util.ArrayList
 import java.util.HashMap
 import com.msg.region.Configuration

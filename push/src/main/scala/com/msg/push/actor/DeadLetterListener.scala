@@ -3,8 +3,8 @@ package com.msg.push.actor
 import akka.actor.Actor
 import akka.actor.ActorLogging
 import akka.actor.DeadLetter
-import com.msg.base.model.Msg
-import com.msg.base.model.DeadMsg
+import com.msg.common.model.Msg
+import com.msg.common.model.DeadMsg
 
 class DeadLetterListener extends Actor with ActorLogging {
 	def receive = {

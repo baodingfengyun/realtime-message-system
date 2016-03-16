@@ -4,11 +4,11 @@ import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.actor.Props
 import akka.cluster.sharding.ClusterSharding
-import com.msg.base.model._
+import com.msg.common.model._
 import com.msg.region.util.Constants
 import akka.actor.ActorLogging
 import java.util.Date
-import com.msg.base.util.Md5
+import com.msg.common.util.Md5
 
 class ReceiveMsg(shardName: String) extends Actor with ActorLogging {
 

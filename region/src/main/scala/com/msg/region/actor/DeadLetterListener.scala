@@ -3,8 +3,8 @@ package com.msg.region.actor
 import akka.actor.Actor
 import akka.actor.ActorLogging
 import akka.actor.DeadLetter
-import com.msg.base.model.Msg
-import com.msg.base.model.DeadMsg
+import com.msg.common.model.Msg
+import com.msg.common.model.DeadMsg
 import com.msg.region.util.RegionInfoMongoHelper
 import com.msg.region.util.Constants
 
