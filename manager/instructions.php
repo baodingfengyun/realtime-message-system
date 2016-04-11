@@ -112,7 +112,7 @@ $(document).ready(function(){
 				具体操作详见<a href="javascript:$('#collapseOne').collapse('hide');$('#collapseFive').collapse('show');"><strong>第五部分：模板定义</strong></a>。
 				</div>
 				<a><img alt="" src="img/create_topic.png" width="700"></a>
-				<div style="line-height: 40px; margin-top: 10px;"><strong>第六步：实体创建完成后,页面会返回<span class="font-span">Token</span>,用户就可以使用<span class="font-span">组织代码</span>、<span class="font-span">实体名称</span>、<span class="font-span">Token</span>值进行消息发布操作了。</strong></div>
+				<div style="line-height: 40px; margin-top: 10px;"><strong>第六步：实体创建完成后,页面会返回<span class="font-span">Token</span>,用户就可以使用<span class="font-span">应用代码</span>、<span class="font-span">实体名称</span>、<span class="font-span">Token</span>值进行消息发布操作了。</strong></div>
 				<a><img alt="" src="img/topic_list1.png" width="700"></a>
 				<div style="line-height: 40px; margin-top: 10px;"><strong>第七步：实体管理页面，点击操作按钮弹出下拉菜单，还提供了<span class="font-span">编辑</span>、<span class="font-span">详情</span>功能</strong></div>
 				<a><img alt="" src="img/topic_list2.png" width="700"></a>
@@ -142,7 +142,7 @@ $(document).ready(function(){
 		      			<p>1、下载js代码。ie9及以下版本需要下载<a href="down/WebSocketMain.swf.zip">WebSocketMain.swf。</a></p>
 		      			<p>2、js代码调用。</p>
 		      			<p>消息订阅方法：extPushWebSocketConnect().sendCmd(topic,type,token,identifier)。</p>
-		      			<p>参数说明：topic ：组织代码+"_"+实体名称；type ：sub/unsub ，即订阅/取消；token: 实体token；identifier:订阅者标识（没有传空字符）。</p>
+		      			<p>参数说明：topic ：应用代码+"_"+实体名称；type ：sub/unsub ，即订阅/取消；token: 实体token；identifier:订阅者标识（没有传空字符）。</p>
 		      			<div class="panel  panel-default" style="padding: 10px;line-height: 30px;">
 		      			var connect = new extPushWebSocketConnect(); <br>
 						connect.init(new extPushWebSocketClient()); //初始化<br>
@@ -150,7 +150,7 @@ $(document).ready(function(){
 						</div>
 						<p>3、消息发布。</p>
 						<p>使用post方式发送到http://服务ip:端口/msg/push/data地址。</p>
-						<p>相关参数为：topic ：组织代码+"_"+实体名称；token ：实体token；content ：消息内容。</p>
+						<p>相关参数为：topic ：应用代码+"_"+实体名称；token ：实体token；content ：消息内容。</p>
 						<p>4、消息接收。</p>
 						<div class="panel  panel-default" style="padding: 10px;line-height: 30px;">
 							extPushWebSocketClient.prototype = { <br>

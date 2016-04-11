@@ -12,7 +12,7 @@
 		
 		foreach ($cursor['notify'] as $key=>$notify){
 			echo "<tr>".
-					"<td>组织代码</td>"
+					"<td>应用代码</td>"
 					."<td>".$_POST ["code"]."</td>"
 				 ."</tr>"
 				 ."<tr>".

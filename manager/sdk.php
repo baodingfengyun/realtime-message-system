@@ -21,9 +21,9 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>goodrain-websoket.js</td>
+					<td>websoket.js</td>
 	      			<td>2016-03-30</td>
-	      			<td><a href="down/goodrain-websoket.js.zip">下载</a></td>
+	      			<td><a href="down/websoket.js.zip">下载</a></td>
 				</tr>
 			</tbody>
 		</table>

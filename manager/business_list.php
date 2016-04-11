@@ -16,8 +16,8 @@
 					<thead>
 						<tr>
 							<th>序号</th>
-							<th>组织名称</th>
-							<th>组织代码</th>
+							<th>应用名称</th>
+							<th>应用代码</th>
 							<th>创建时间</th>
 							<th>审核</th>
 							<th>操作</th>
@@ -92,18 +92,18 @@
 									</div>
 									<div class="form-group">
 										<label for="business" class="col-sm-2 control-label"><span
-											style="color: red">*</span>组织名称</label>
+											style="color: red">*</span>应用名称</label>
 										<div class="col-sm-10">
 											<input type="text" class="form-control" id="businessName"
-												name="businessName" placeholder="组织名称">
+												name="businessName" placeholder="应用名称">
 										</div>
 									</div>
 									<div class="form-group">
 										<label for="topic" class="col-sm-2 control-label"><span
-											style="color: red">*</span>组织代码 </label>
+											style="color: red">*</span>应用代码 </label>
 										<div class="col-sm-10">
 											<input type="text" class="form-control" id="code" name="code"
-												placeholder="组织名称全拼">
+												placeholder="应用名称全拼">
 										</div>
 									</div>
 								</form>
@@ -127,17 +127,17 @@
 					var result = true;
 					var result_info="";
 					if(bName == ""){
-						result_info="组织名称不能为空!";
+						result_info="应用名称不能为空!";
 						result = false;
 						$('#businessName').focus();
 					}
 					else if(code == ""){
-						result_info="组织代码不能为空!";
+						result_info="应用代码不能为空!";
 						result = false;
 						$('#code').focus();
 					}
 					else if(!codeReg.test(code)){    
-						result_info="组织代码必须为英文字母!"; 
+						result_info="应用代码必须为英文字母!"; 
 			            result = false; 
 			            $('#code').focus();
 			        }
@@ -158,7 +158,7 @@
 				 		  		alert("保存成功");
 				 		  		loadPage("business_list.php");
 				 		  	}else if(msg == 1){
-				 		  		alert("组织代码已存在");
+				 		  		alert("应用代码已存在");
 				 		  	}else if(msg == 2){
 				 		  		alert("保存失败");
 				 		  	} 		  	

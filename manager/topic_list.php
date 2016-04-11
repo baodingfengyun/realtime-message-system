@@ -19,7 +19,7 @@
 					<thead>
 						<tr>
 							<th>序号</th>
-							<th>组织代码</th>
+							<th>应用代码</th>
 							<th>实体名称</th>
 							<th>Token</th>
 							<th>交换方式</th>
@@ -108,7 +108,7 @@
 						</div>
 						<div class="form-group">
 							<label for="businessName" class="col-sm-3 control-label"><span
-								style="color: red">*</span>组织名称</label>
+								style="color: red">*</span>应用名称</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="businessName" disabled="disabled"
 									name="businessName" value="<?php echo $_GET ["businessName"];?>">
@@ -116,7 +116,7 @@
 						</div>
 						<div class="form-group">
 							<label for="code" class="col-sm-3 control-label"><span
-								style="color: red">*</span>组织代码</label>
+								style="color: red">*</span>应用代码</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" id="code" disabled="disabled"
 									name="code" value="<?php echo $_GET ["code"];?>">

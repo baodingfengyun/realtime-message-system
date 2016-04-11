@@ -71,7 +71,7 @@ $(document).ready(function(){
 	</nav>
 	<div class="container-fluid">
 		<h3 class="page-header" style="margin-top: 28px;">在线演示</h3>
-		<div class="alert alert-info" role="alert" style="line-height: 30px;"><strong>说明</strong>：请用户参照<strong>使用手册</strong>的说明进行操作。在用户创建完成组织和实体后，会得到系统返回的Token。用户就可以使用<strong>组织代码</strong>、<strong>实体名称</strong>和<strong>Token</strong>值，进行消息的订阅和发布功能了。<br/>
+		<div class="alert alert-info" role="alert" style="line-height: 30px;"><strong>说明</strong>：请用户参照<strong>使用手册</strong>的说明进行操作。在用户创建完成应用和实体后，会得到系统返回的Token。用户就可以使用<strong>应用代码</strong>、<strong>实体名称</strong>和<strong>Token</strong>值，进行消息的订阅和发布功能了。<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意，实体编辑完成后，会在5分钟以内生效。请参考以下<strong>在线演示</strong>。</div>
 	</div>
 	
@@ -91,10 +91,10 @@ $(document).ready(function(){
 				<h4>接收</h4>
 				<form id="form1" class="form-horizontal" role="form">
 					<div class="form-group">
-						<label for="code" class="col-md-2 col-lg-2 control-label">组织代码</label>
+						<label for="code" class="col-md-2 col-lg-2 control-label">应用代码</label>
 						<div class="col-md-9 col-lg-9">
 							<input type="text" class="form-control" id="code" name="code"
-								placeholder="组织代码" value="msgAdmin">
+								placeholder="应用代码" value="msgAdmin">
 						</div>
 					</div>
 					<div class="form-group">
