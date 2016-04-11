@@ -22,7 +22,7 @@
 			<tbody>
 				<tr>
 					<td>goodrain-websoket.js</td>
-	      			<td>2015-12-15</td>
+	      			<td>2016-03-30</td>
 	      			<td><a href="down/goodrain-websoket.js.zip">下载</a></td>
 				</tr>
 			</tbody>
@@ -51,11 +51,11 @@
 			<tbody>
 				<tr>
 					<td>ws://有的正式使用地址:0000/websocket</td>
-	      			<td>2015-12-22</td>
+	      			<td>2016-03-30</td>
 				</tr>
 				<tr>
 					<td>ws://有的正式使用地址:0001/websocket</td>
-	      			<td>2015-12-22</td>
+	      			<td>2016-03-30</td>
 				</tr>
 			</tbody>
 		</table>
