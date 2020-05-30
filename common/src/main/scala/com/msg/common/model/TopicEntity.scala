@@ -2,8 +2,31 @@ package com.msg.common.model
 
 import java.util.HashMap
 
-case class TopicInfo(topic: String, code: String, key: String, isStore: Int, storeMethod: Int, sendNum: Int, storeNum: Int, isRegx: Int, status: Int, isTemplate: Int, swapType: Int, regMethod: String, defaultTemp: String, defaultNotify: String,broadStatus:Int)
+/**
+ * 主题信息
+ * @param topic
+ * @param code
+ * @param key
+ * @param isStore
+ * @param storeMethod
+ * @param sendNum
+ * @param storeNum
+ * @param isRegx
+ * @param status
+ * @param isTemplate
+ * @param swapType
+ * @param regMethod
+ * @param defaultTemp
+ * @param defaultNotify
+ * @param broadStatus
+ */
+case class TopicInfo(topic: String, code: String, key: String, isStore: Int, storeMethod: Int, sendNum: Int,
+                     storeNum: Int, isRegx: Int, status: Int, isTemplate: Int, swapType: Int, regMethod: String,
+                     defaultTemp: String, defaultNotify: String,broadStatus:Int)
 
+/**
+ * 主题实体
+ */
 object TopicEntity {
 
     private val topicInfoMap = new HashMap[String, TopicInfo]

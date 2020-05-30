@@ -6,6 +6,9 @@ case class TemplateAttr(name: String, rfield: String, qfield: String, source: St
 
 case class TemplateInfo(name: String, content: String, status: Int, pars: ArrayList[TemplateAttr])
 
+/**
+ * 模板实体
+ */
 object TemplateEntity {
     private val templateInfoMap = new HashMap[String, HashMap[String, TemplateInfo]]
     def addTemplateInfo(topic: String, templateInfo: TemplateInfo) = {

@@ -4,6 +4,9 @@ import java.util.HashMap
 
 case class QueueInfo(topic: String, address: String, category: Int, status: Int, checkTime: Int)
 
+/**
+ * 队列实体
+ */
 object QueueEntity {
     private val queueInfoMap = new HashMap[String, HashMap[String, QueueInfo]]
     def addQueueInfo(topic: String, queueInfo: QueueInfo) = {

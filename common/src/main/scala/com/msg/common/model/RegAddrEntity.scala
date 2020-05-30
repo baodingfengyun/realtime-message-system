@@ -5,6 +5,9 @@ import java.util.ArrayList
 import scala.collection.JavaConversions._
 import scala.concurrent.forkjoin.ThreadLocalRandom
 
+/**
+ * 注册地址实体
+ */
 object RegAddrEntity {
 	private val regionStore = new ArrayList[String]
 	def addAddress(address: String) = {

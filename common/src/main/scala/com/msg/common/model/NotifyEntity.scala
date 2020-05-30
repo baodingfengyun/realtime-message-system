@@ -6,6 +6,9 @@ case class NotifyAttr(name: String, rfield: String, qfield: String, source: Stri
 
 case class NotifyInfo(name: String, content: String, status: Int, pars: ArrayList[NotifyAttr])
 
+/**
+ * 通知实体
+ */
 object NotifyEntity {
     private val notifyInfoMap = new HashMap[String, HashMap[String, NotifyInfo]]
     def addNotifyInfo(topic: String, notifyInfo: NotifyInfo) = {
