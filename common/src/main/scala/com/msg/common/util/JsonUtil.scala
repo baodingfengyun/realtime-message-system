@@ -1,9 +1,8 @@
 package com.msg.common.util
 
-import com.fasterxml.jackson.databind.{ DeserializationFeature, ObjectMapper }
+import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
-import scala.collection.mutable.HashMap
 
 object JsonUtil{
 	val mapper = new ObjectMapper() with ScalaObjectMapper

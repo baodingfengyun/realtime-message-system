@@ -1,9 +1,6 @@
 package com.msg.common.model
 
-import java.util.HashSet
-import scala.concurrent.forkjoin.ThreadLocalRandom
-import java.util.ArrayList
-import java.util.HashMap
+import java.util.{ArrayList, HashMap}
 
 case class TemplateAttr(name: String, rfield: String, qfield: String, source: String)
 

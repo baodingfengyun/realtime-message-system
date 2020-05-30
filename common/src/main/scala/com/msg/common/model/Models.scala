@@ -1,8 +1,5 @@
 package com.msg.common.model
 
-import java.util.ArrayList
-import java.util.HashMap
-
 trait OkoMessage extends Serializable
 
 case class Sub(topic: String, key: String, info: String) extends OkoMessage

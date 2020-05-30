@@ -1,9 +1,9 @@
 package com.msg.common.model
 
-import java.util.HashSet
-import scala.concurrent.forkjoin.ThreadLocalRandom
 import java.util.ArrayList
+
 import scala.collection.JavaConversions._
+import scala.concurrent.forkjoin.ThreadLocalRandom
 
 object RegAddrEntity {
 	private val regionStore = new ArrayList[String]

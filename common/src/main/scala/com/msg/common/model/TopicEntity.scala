@@ -1,8 +1,5 @@
 package com.msg.common.model
 
-import java.util.HashSet
-import scala.concurrent.forkjoin.ThreadLocalRandom
-import java.util.ArrayList
 import java.util.HashMap
 
 case class TopicInfo(topic: String, code: String, key: String, isStore: Int, storeMethod: Int, sendNum: Int, storeNum: Int, isRegx: Int, status: Int, isTemplate: Int, swapType: Int, regMethod: String, defaultTemp: String, defaultNotify: String,broadStatus:Int)

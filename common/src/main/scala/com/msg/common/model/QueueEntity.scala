@@ -1,8 +1,5 @@
 package com.msg.common.model
 
-import java.util.HashSet
-import scala.concurrent.forkjoin.ThreadLocalRandom
-import java.util.ArrayList
 import java.util.HashMap
 
 case class QueueInfo(topic: String, address: String, category: Int, status: Int, checkTime: Int)

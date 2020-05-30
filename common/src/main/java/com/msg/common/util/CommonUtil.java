@@ -26,7 +26,7 @@ public class CommonUtil {
         }
         return json;
     }
-    
+
     public static String toJsonStr(ArrayList list) {
         ObjectMapper mapper = new ObjectMapper();
         String json = "";

@@ -1,9 +1,10 @@
 package com.msg.common.util
 
-import util.parsing.json.JSON
-import scala.language.dynamics
 import java.util.HashMap
+
 import scala.collection.JavaConversions._
+import scala.language.dynamics
+import scala.util.parsing.json.JSON
 
 trait JsonElement extends Dynamic { self =>
     def selectDynamic(field: String): JsonElement = EmptyElement
