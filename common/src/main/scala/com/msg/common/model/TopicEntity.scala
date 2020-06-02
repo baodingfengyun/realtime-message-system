@@ -28,7 +28,7 @@ case class TopicInfo(topic: String, code: String, key: String, isStore: Int, sto
  * 主题实体
  */
 object TopicEntity {
-
+    // 主题名 -> 主题信息
     private val topicInfoMap = new HashMap[String, TopicInfo]
 
     def addTopicInfo(topic: String, topicInfo: TopicInfo) = {
