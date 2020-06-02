@@ -1,5 +1,5 @@
 val scalaVer = "2.11.7"
-val akkaVersion = "2.4.2"
+val akkaVersion = "2.4.20"
 
 organization := "com.goodrain"
 name := "realtime-message-push"
@@ -8,7 +8,7 @@ version := "0.0.1-SNAPSHOT"
 scalaVersion := scalaVer
 autoScalaLibrary := false
 
-resolvers += "Typesafe Releases" at "http://repo.typesafe.com/typesafe/maven-releases/"
+resolvers += "Typesafe Releases" at "https://repo.typesafe.com/typesafe/maven-releases/"
 
 scalacOptions ++= Seq(
   "-encoding", "UTF-8",

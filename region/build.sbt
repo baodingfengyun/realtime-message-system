@@ -1,5 +1,5 @@
 val scalaVer = "2.11.7"
-val akkaVersion = "2.4.2"
+val akkaVersion = "2.4.20"
 
 organization := "com.goodrain"
 name := "realtime-message-region"

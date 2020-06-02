@@ -2,6 +2,14 @@ package com.msg.common.model
 
 import java.util.HashMap
 
+/**
+ * 队列信息
+ * @param topic     主题
+ * @param address   地址
+ * @param category  类别
+ * @param status    状态
+ * @param checkTime 检测时间戳
+ */
 case class QueueInfo(topic: String, address: String, category: Int, status: Int, checkTime: Int)
 
 /**
