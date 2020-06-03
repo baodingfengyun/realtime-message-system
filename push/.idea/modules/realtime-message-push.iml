@@ -10,8 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8_AdoptOpenJDK" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="realtime-message-common" scope="PROVIDED" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: com.chuusai:shapeless_2.11:2.3.0:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: com.corundumstudio.socketio:netty-socketio:1.7.10:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: com.esotericsoftware.minlog:minlog:1.2:jar" level="project" />
@@ -104,6 +105,5 @@
     <orderEntry type="library" scope="PROVIDED" name="sbt: org.slf4j:slf4j-log4j12:1.7.19:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: org.typelevel:macro-compat_2.11:1.1.1:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: org.uncommons.maths:uncommons-maths:1.2.2a:jar" level="project" />
-    <orderEntry type="module" module-name="realtime-message-common" scope="PROVIDED" />
   </component>
 </module>

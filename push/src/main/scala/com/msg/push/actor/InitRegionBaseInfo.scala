@@ -6,12 +6,17 @@ import akka.actor.ActorLogging
 import com.msg.push.util.RegionInfoMongoHelper
 import com.msg.push.util.Constants
 
+/**
+ * 定义 InitRegionBaseInfo actor
+ */
 class InitRegionBaseInfo extends Actor with ActorLogging {
+    val COMMAND_INIT = "init"
     import context.dispatcher
-    context.system.scheduler.schedule(1.milliseconds, 60.seconds, self, "init")
+    // 定义一个60秒的定时器，给自己发init
+    context.system.scheduler.schedule(1.milliseconds, 60.seconds, self, COMMAND_INIT)
     var num = 0
     def receive = {
-        case "init" =>
+        case COMMAND_INIT =>
             RegionInfoMongoHelper.initAllRegionInfo(Constants.REGION_INFO)
             //RegionInfoMongoHelper.initTopicInfo(Constants.TOPIC_INFO)
         case _ =>

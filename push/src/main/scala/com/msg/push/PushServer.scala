@@ -1,30 +1,27 @@
 package com.msg.push
 
-import akka.actor.ActorSystem
-import akka.actor.Props
-import akka.io.IO
-import akka.io.Tcp
-import java.net.InetSocketAddress
+import akka.actor.{ActorSystem, DeadLetter, Props}
+import akka.event.slf4j.Logger
+import com.msg.push.actor.{DeadLetterListener, InitRegionBaseInfo, WebsoketCenter}
 import com.typesafe.config.ConfigFactory
-import com.msg.push.actor.DeadLetterListener
-import akka.actor.DeadLetter
-import com.msg.push.actor.WebsoketCenter
-import com.msg.push.actor.SocketIoCenter
-import com.msg.push.actor.InitRegionBaseInfo
-import com.msg.push.actor.SocketCenter
 
+/**
+ * 推送服务器
+ */
 object PushServer extends App {
-    implicit lazy val system = ActorSystem("NewEventSystem", ConfigFactory.load("push-config.conf"))
-    if (!args.isEmpty) System.setProperty("akka.remote.netty.tcp.port", args(0))
-
-    //初始化远程地址
-    system.actorOf(Props[InitRegionBaseInfo], "initAddress")
-
-    val listener = system.actorOf(Props[DeadLetterListener], "deadLetter")
-    system.eventStream.subscribe(listener, classOf[DeadLetter])
-
-    //定义新的websoket 通过极推送服务
-    system.actorOf(Props[WebsoketCenter], "websoket")
+    val LOG = Logger.apply(PushServer.getClass.getName)
+    LOG.info("> PushServer starting")
+//    implicit lazy val system = ActorSystem("NewEventSystem", ConfigFactory.load("push-config.conf"))
+//    if (!args.isEmpty) System.setProperty("akka.remote.netty.tcp.port", args(0))
+//
+//    //初始化远程地址
+//    system.actorOf(Props[InitRegionBaseInfo], "initAddress")
+//
+//    val listener = system.actorOf(Props[DeadLetterListener], "deadLetter")
+//    system.eventStream.subscribe(listener, classOf[DeadLetter])
+//
+//    //定义新的websoket 通过极推送服务
+//    system.actorOf(Props[WebsoketCenter], "websoket")
 
     //定义新的socketIo 通过极推送服务
     //system.actorOf(Props[SocketIoCenter], "socketio")

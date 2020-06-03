@@ -9,7 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8_AdoptOpenJDK" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.7.2:jar" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="sbt: com.fasterxml.jackson.core:jackson-core:2.7.2:jar" level="project" />

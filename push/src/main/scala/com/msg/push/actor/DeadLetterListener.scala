@@ -6,6 +6,10 @@ import akka.actor.DeadLetter
 import com.msg.common.model.Msg
 import com.msg.common.model.DeadMsg
 
+/**
+ * 定义 DeadLetterListener actor
+ * 基于模式匹配的逻辑
+ */
 class DeadLetterListener extends Actor with ActorLogging {
 	def receive = {
 		case d: DeadLetter => {
