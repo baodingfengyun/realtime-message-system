@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/realtime-message-common.iml" filepath="$PROJECT_DIR$/.idea/modules/realtime-message-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/realtime-message-common-build.iml" filepath="$PROJECT_DIR$/.idea/modules/realtime-message-common-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../push/.idea/modules/realtime-message-push.iml" filepath="$PROJECT_DIR$/../push/.idea/modules/realtime-message-push.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../push/.idea/modules/realtime-message-push-build.iml" filepath="$PROJECT_DIR$/../push/.idea/modules/realtime-message-push-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../region/.idea/modules/realtime-message-region.iml" filepath="$PROJECT_DIR$/../region/.idea/modules/realtime-message-region.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../region/.idea/modules/realtime-message-region-build.iml" filepath="$PROJECT_DIR$/../region/.idea/modules/realtime-message-region-build.iml" />
     </modules>
   </component>
 </project>

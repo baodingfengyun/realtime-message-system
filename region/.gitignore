@@ -1,0 +1,13 @@
+.svn
+.tmp
+.download
+output
+.*.swp
+.*.swo
+/**/y.output
+/**/*.log
+profile.out
+coverage.txt
+package
+target
+libraries

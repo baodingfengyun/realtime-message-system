@@ -8,7 +8,8 @@ version := "0.0.1-SNAPSHOT"
 scalaVersion := scalaVer
 autoScalaLibrary := false
 
-resolvers += "Typesafe Releases" at "http://repo.typesafe.com/typesafe/maven-releases/"
+resolvers += ("Typesafe Releases" at "http://repo.typesafe.com/typesafe/maven-releases/")
+    .withAllowInsecureProtocol(true)
 
 scalacOptions ++= Seq(
   "-encoding", "UTF-8",
