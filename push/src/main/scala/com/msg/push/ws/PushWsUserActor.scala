@@ -1,21 +1,24 @@
 package com.msg.push.ws
 
-import akka.actor.Actor
-import akka.actor.ActorLogging
-import org.java_websocket.WebSocket
-import scala.collection.JavaConversions._
-import akka.actor.ActorRef
-import org.java_websocket.handshake.ClientHandshake
-import com.msg.push.actor.SubBaseActor
-import com.msg.common.model.Msg
 import java.util.ArrayList
+
+import akka.actor.ActorLogging
+import com.msg.common.model.{Msg, RegAddrEntity}
+import com.msg.push.actor.SubBaseActor
 import com.msg.push.util.Constants
-import com.msg.common.model.RegAddrEntity
+import org.java_websocket.WebSocket
+import org.java_websocket.handshake.ClientHandshake
+
+import scala.collection.JavaConversions._
 
 case class Open(ws: WebSocket, hs: ClientHandshake)
 case class Close(ws: WebSocket, code: Int, reason: String, external: Boolean)
 case class Error(ws: WebSocket, ex: Exception)
 
+/**
+ * 基于WebSocket的玩家推送actor
+ * @param ws
+ */
 class PushWsUserActor(ws: WebSocket) extends SubBaseActor with ActorLogging {
 
     def remoteAddress: String = RegAddrEntity.getRandomAddress

@@ -5,11 +5,14 @@ import akka.actor.Actor
 import com.msg.push.socketio.SocketIoService
 import com.msg.push.Configuration
 
+/**
+ * 定义SocketIoCenter actor
+ */
 class SocketIoCenter extends Actor with ActorLogging {
 
     override def preStart(): Unit = {
-        val soketioServer = new SocketIoService(context.system)
-        soketioServer.getSocketIoServer(Configuration.soketIoIp, Configuration.soketIoPort).start()
+        val socketIoServer = new SocketIoService(context.system)
+        socketIoServer.getSocketIoServer(Configuration.socketIoIp, Configuration.socketIoPort).start()
     }
 
     def receive = {

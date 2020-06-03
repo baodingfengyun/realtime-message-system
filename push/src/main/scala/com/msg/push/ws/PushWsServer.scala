@@ -1,22 +1,23 @@
 package com.msg.push.ws
 
-import org.java_websocket.WebSocket
-import org.java_websocket.handshake.ClientHandshake
-import org.java_websocket.framing.CloseFrame
-import org.java_websocket.server.WebSocketServer
 import java.net.InetSocketAddress
-import akka.actor.ActorRef
-import akka.actor.ActorContext
-import akka.actor.Props
-import akka.actor.ActorSystem
 import java.text.SimpleDateFormat
 import java.util.Date
-import com.msg.common.model.Sub
-import com.msg.common.model.UnSub
-import com.msg.common.model.TermUnSubAll
-import com.msg.common.model.Stop
-import akka.actor.PoisonPill
 
+import akka.actor.{ActorRef, ActorSystem, Props}
+import com.msg.common.model.{Stop, Sub, TermUnSubAll, UnSub}
+import org.java_websocket.WebSocket
+import org.java_websocket.framing.CloseFrame
+import org.java_websocket.handshake.ClientHandshake
+import org.java_websocket.server.WebSocketServer
+
+/**
+ * 基于WebSocket的推送服务器
+ *
+ * @param wsUri
+ * @param port
+ * @param context
+ */
 class PushWsServer(wsUri: String, port: Int, context: ActorSystem) extends WebSocketServer(new InetSocketAddress(port)) {
     private var reactors = Map[Int, ActorRef]()
     private var joinNum = 0

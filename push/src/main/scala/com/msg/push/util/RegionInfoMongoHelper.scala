@@ -1,24 +1,12 @@
 package com.msg.push.util
 
-import com.mongodb.MongoException
-import com.typesafe.config.ConfigFactory
-import com.mongodb.MongoOptions
-import com.mongodb.ServerAddress
-import com.mongodb.casbah.MongoConnection
-import com.mongodb.casbah.MongoDB
-import scala.util.Try
-import com.mongodb.casbah.commons.MongoDBObject
 import java.util.ArrayList
-import com.mongodb.DBObject
-import org.bson.BSON
-import com.mongodb.BasicDBList
-import com.msg.common.model.RegAddrEntity
-import com.msg.common.model.TopicInfo
-import com.msg.common.model.QueueInfo
-import com.msg.common.model.QueueEntity
-import com.msg.common.model.TemplateEntity
-import com.msg.common.model.TemplateInfo
-import com.msg.common.model.TopicEntity
+
+import com.mongodb.{DBObject, MongoOptions, ServerAddress}
+import com.mongodb.casbah.{MongoConnection, MongoDB}
+import com.msg.common.model.{RegAddrEntity, TopicEntity, TopicInfo}
+import com.typesafe.config.ConfigFactory
+
 import scala.collection.JavaConversions._
 
 object RegionInfoMongoHelper {

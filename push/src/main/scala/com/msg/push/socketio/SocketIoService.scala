@@ -9,7 +9,14 @@ import com.msg.common.model.Stop
 import com.msg.common.model.Sub
 import com.msg.common.model.UnSub
 
+/**
+ * SocketIo服务
+ * @param context
+ */
 class SocketIoService(context: ActorSystem) extends SocketIo {
+    /**
+     * id -> actor
+     */
     private var reactors = Map[Int, ActorRef]()
 
     final def forResource(descriptor: Int, reactor: Option[ActorRef]) {

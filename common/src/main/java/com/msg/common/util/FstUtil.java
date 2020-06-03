@@ -42,6 +42,11 @@ public class FstUtil {
         return buf;
     }
 
+    /**
+     * 将序列化后的字节流转为对象
+     * @param buf
+     * @return
+     */
     public static Object d(byte[] buf) {
         FSTObjectInputNoShared in = null;
         Object read = null;

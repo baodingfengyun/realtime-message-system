@@ -2,7 +2,7 @@ package com.msg.push
 
 import akka.actor.{ActorSystem, DeadLetter, Props}
 import akka.event.slf4j.Logger
-import com.msg.push.actor.{DeadLetterListener, InitRegionBaseInfo, WebsoketCenter}
+import com.msg.push.actor.{DeadLetterListener, InitRegionBaseInfo, WebSocketCenter}
 import com.typesafe.config.ConfigFactory
 
 /**
@@ -37,8 +37,8 @@ object Configuration {
     val newWebsocketUri = config.getString("websocket.wsuri")
     val newWebsocketPort = config.getInt("websocket.port")
     //socket Io
-    val soketIoIp = config.getString("socketio.host")
-    val soketIoPort = config.getInt("socketio.port")   
+    val socketIoIp = config.getString("socketio.host")
+    val socketIoPort = config.getInt("socketio.port")
     //socket
     val socketIp = config.getString("socket.host")
     val socketPort = config.getInt("socket.port")    
