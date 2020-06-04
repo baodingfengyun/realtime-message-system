@@ -10,12 +10,14 @@ import akka.stream.scaladsl.Flow
  * cancelling upstream and completing downstream flow on demand.
  */
 object FlowBreaker {
-    def apply[T]: Flow[T, T, Cancellable] = {
-        val cancellable = new Cancellable {
-            private val cancelled = new AtomicBoolean()
-            override def cancel() = cancelled.compareAndSet(false, true)
-            override def isCancelled() = cancelled.get
-        }
-        Flow[T].takeWhile(_ ⇒ !cancellable.isCancelled).mapMaterializedValue(_ ⇒ cancellable)
+  def apply[T]: Flow[T, T, Cancellable] = {
+    val cancellable = new Cancellable {
+      private val cancelled = new AtomicBoolean()
+
+      override def cancel() = cancelled.compareAndSet(false, true)
+
+      override def isCancelled() = cancelled.get
     }
+    Flow[T].takeWhile(_ ⇒ !cancellable.isCancelled).mapMaterializedValue(_ ⇒ cancellable)
+  }
 }

@@ -1,14 +1,12 @@
 package com.msg.region.actor
 
-import com.msg.common.model.MData
-import com.msg.common.model.ReplySubNum
-import com.msg.common.model.VisitMsg
 import akka.cluster.sharding.ShardRegion
+import com.msg.common.model.{MData, ReplySubNum, VisitMsg}
 import com.msg.region.Configuration
 
 
 object MsgOject {
-	
+
     val extractEntityId: ShardRegion.ExtractEntityId = {
         case msg @ MData(sender, receiver, msginfo, isSave) => (receiver, msg)
         case reply @ ReplySubNum(parentTopic, topic, num) => (parentTopic, reply)

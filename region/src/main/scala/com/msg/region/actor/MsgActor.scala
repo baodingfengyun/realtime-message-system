@@ -1,27 +1,17 @@
 package com.msg.region.actor
 
-import akka.actor.ActorLogging
-import akka.actor.Actor
-import akka.persistence.PersistentActor
+import java.util.{ArrayList, HashMap}
+
+import akka.actor.{ActorLogging, ActorRef}
+import akka.cluster.sharding.ClusterSharding
+import akka.persistence._
+import com.msg.common.model._
+import com.msg.common.util.FstUtil
+import com.msg.region.Configuration
+import com.msg.region.util.{Constants, RegionInfoMongoHelper}
+
 import scala.collection.JavaConversions._
 import scala.concurrent.duration._
-import akka.persistence.SnapshotOffer
-import akka.persistence.SnapshotMetadata
-import akka.persistence.RecoveryCompleted
-import com.msg.common.util.FstUtil
-import akka.persistence.SnapshotSelectionCriteria
-import com.msg.region.util.Constants
-import java.util.Date
-import akka.cluster.sharding.ClusterSharding
-import akka.persistence.Persistence
-import akka.actor.Terminated
-import akka.actor.ActorRef
-import akka.actor.ActorSystem
-import com.msg.common.model._
-import java.util.ArrayList
-import java.util.HashMap
-import com.msg.region.Configuration
-import com.msg.region.util.RegionInfoMongoHelper
 
 case class Check()
 case class ReplyMe()

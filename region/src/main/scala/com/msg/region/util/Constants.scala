@@ -1,11 +1,10 @@
 package com.msg.region.util
 
 import java.text.SimpleDateFormat
-import com.msg.common.model.TopicEntity
-import com.msg.common.util.Md5
 import java.util.HashMap
-import com.msg.common.util.JsonUtil
-import com.msg.common.model.TopicInfo
+
+import com.msg.common.model.{TopicEntity, TopicInfo}
+import com.msg.common.util.{JsonUtil, Md5}
 
 object Constants {
     def sdf = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss")

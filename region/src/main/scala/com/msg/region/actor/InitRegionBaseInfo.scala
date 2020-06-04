@@ -1,10 +1,9 @@
 package com.msg.region.actor
 
-import akka.actor.Actor
+import akka.actor.{Actor, ActorLogging}
+import com.msg.region.util.{Constants, RegionInfoMongoHelper}
+
 import scala.concurrent.duration._
-import akka.actor.ActorLogging
-import com.msg.region.util.RegionInfoMongoHelper
-import com.msg.region.util.Constants
 
 class InitRegionBaseInfo extends Actor with ActorLogging {
     import context.dispatcher

@@ -1,17 +1,12 @@
 package com.msg.region.actor
 
-import akka.actor.ActorLogging
-import akka.actor.Actor
-import akka.actor.Props
-import akka.actor.DeadLetter
-import akka.actor.OneForOneStrategy
+import akka.actor.{Actor, ActorLogging, DeadLetter, OneForOneStrategy, Props}
 import akka.actor.SupervisorStrategy._
-import akka.cluster.sharding.ClusterSharding
-import akka.cluster.sharding.ClusterShardingSettings
-import com.msg.region.http.DataGetService
+import akka.cluster.sharding.{ClusterSharding, ClusterShardingSettings}
 import akka.io.IO
-import spray.can.Http
 import com.msg.region.Configuration
+import com.msg.region.http.DataGetService
+import spray.can.Http
 
 class MsgExchangeActor extends Actor with ActorLogging {
 

@@ -1,30 +1,18 @@
 package com.msg.region.http
 
 import akka.actor._
-import spray.routing.RequestContext
-import java.util.HashMap
-import java.util.ArrayList
-import spray.can.Http
-import spray.util._
-import spray.http._
-import HttpMethods._
-import MediaTypes._
-import akka.util.Timeout
 import akka.cluster.sharding.ClusterSharding
-import com.msg.common.model.VisitMsg
-import com.msg.common.model.History
-import com.msg.common.util.FstUtil
-import com.msg.common.util.JsonUtil
-import spray.httpx.encoding.Gzip
-import com.msg.common.model.TopicEntity
+import com.msg.common.model.{History, Msg, VisitMsg}
+import com.msg.common.util.{FstUtil, JsonUtil}
 import com.msg.region.util.Constants
-import java.nio.charset.Charset
-import com.msg.common.model.Msg
+import spray.http.MediaTypes._
+import spray.http._
+import spray.httpx.encoding.Gzip
+import spray.routing.RequestContext
 
 case class RetrievalTimeout()
 
 class DataGetService(shardName: String) extends Actor with HttpGetRouter with ActorLogging {
-    import context.dispatcher
     val postRegion = ClusterSharding(context.system).shardRegion(shardName)
     def actorRefFactory = context
     def receive = runRoute(route)
